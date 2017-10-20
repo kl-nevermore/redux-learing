@@ -17,7 +17,10 @@ function myReducer(state = initState, action) {
   switch (action.type) {
     case "changeState":
       // redux中一定要返回一个新的出去state，不可以改变原来的state
-      return Object.assign({}, state, { myState: ["我是改变的state"] })
+      return {
+        ...state,
+        myState: ["我是改变的state"]
+      }
       break;
     default:
       return state
@@ -32,7 +35,7 @@ console.log('初始的state', store.getState())
 //第二步我们通过创建一个action来让redux dispatch 这个action 去调用reducer
 // action单纯的返回一个必须包含type属性的对象   like:{type:'changeState'}
 function myAction() {
-  return{ type: 'changeState' }
+  return { type: 'changeState' }
 }
 // 第三步 我们调用dispath 来更改state
 store.dispatch(myAction())
