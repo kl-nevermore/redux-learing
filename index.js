@@ -17,10 +17,7 @@ function myReducer(state = initState, action) {
   switch (action.type) {
     case "changeState":
       // redux中一定要返回一个新的出去state，不可以改变原来的state
-      return {
-        ...state,
-        myState: ["我是改变的state"]
-      }
+      return Object.assign({}, state, { myState: ["我是改变的state"] })
       break;
     default:
       return state
