@@ -1,4 +1,4 @@
-//112233
+//我来测试一下test合并到dev
 const redux = require('redux')
 const createStore = redux.createStore
 // 首先我们需要创建一个reducer来处理state
