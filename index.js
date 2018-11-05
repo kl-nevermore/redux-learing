@@ -1,4 +1,4 @@
-//我来测试flow
+//我来测试flow1111111
 const redux = require('redux')
 const createStore = redux.createStore
 // 首先我们需要创建一个reducer来处理state
