@@ -39,3 +39,4 @@ function myAction() {
 // 第三步 我们调用dispath 来更改state
 store.dispatch(myAction())
 console.log('我是改变之后的state', store.getState())
+//我是修改了分之一啊
